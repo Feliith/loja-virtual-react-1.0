@@ -1,0 +1,37 @@
+
+.pop-up {
+    background: #00000056;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 50;
+}
+
+.pop-up-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 10vh;
+    right: 30vw;
+    cursor: pointer;
+}
+
+.pop-up-close i {
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    opacity: .9;
+}
+
+.pop-up-img {
+    max-height: 100vh;
+    cursor: pointer;
+}
