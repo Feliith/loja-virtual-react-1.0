@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import { Contacts } from '../Contacts'
 
+import QrCodeLink from './NavbarComponents/QrCodeLink'
+import Notifications from './NavbarComponents/Notifications'
+import Language from './NavbarComponents/Language'
+
 const Menu = () => {
-    const [qrHover, setQrHover] = useState(false)
-
-    const qrCodeHover = () => {
-        setQrHover(!qrHover)
-    }
-
     return (
         <div className='navbar-menu'>
             <div className="navbar-links one">
@@ -17,19 +15,7 @@ const Menu = () => {
                 <div className="navbar-link">
                     <a href="">Venda na Shopee</a>
                 </div>
-                <div className="navbar-link qr" 
-                    onMouseEnter={qrCodeHover}
-                    onMouseLeave={qrCodeHover}
-                >
-                    <a href="">Baixe o App</a>
-                    <div className={qrHover ? "navbar-qr-conteiner on" : "navbar-qr-conteiner"}>
-                        <img src={require('../../images/navbar-qr.png')} alt="QR Code" />
-                        <div className="stores-logos">
-                            <img src={require('../../images/app-store.png')} alt="App Store" />
-                            <img src={require('../../images/google-play.png')} alt="Google Play" />
-                        </div>
-                    </div>
-                </div>
+                <QrCodeLink />
                 <div className="navbar-link">
                     <a>Siga-nos no</a>
                     <ul className='navbar-contacts'>
@@ -46,25 +32,14 @@ const Menu = () => {
                 </div>
             </div>
             <ul className="navbar-links two">
-                <li className='navbar-link'>
-                    <a href="">
-                        <i className="fa-regular fa-bell"></i>
-                        Notificações
-                    </a>
-                </li>
+                <Notifications />
                 <li className='navbar-link'>
                     <a href="">
                         <i className="fa-regular fa-circle-question"></i>
                         Ajuda
                     </a>
                 </li>
-                <li className='navbar-link lang'>
-                    <a href="">
-                        <i className="fa-solid fa-globe"></i>
-                        Português - BR
-                        <i className="fa-solid fa-angle-down"></i>
-                    </a>
-                </li>
+                <Language />
                 <li className='navbar-link login'>
                     <a href="">Cadastrar</a>
                 </li>
