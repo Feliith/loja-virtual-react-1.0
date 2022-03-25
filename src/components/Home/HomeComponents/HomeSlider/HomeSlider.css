@@ -1,0 +1,97 @@
+
+.home-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 235px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.home .slider-button {
+    background: #00000030;
+    color: #fff;
+    font-size: 22px;
+    border: none;
+    width: 40px;
+    height: 60px;
+    position: absolute;
+    transition: .2s;
+    cursor: pointer;
+    z-index: 20;
+    opacity: 0;
+}
+
+.home-slider:hover .slider-button {
+    opacity: 1;
+}
+
+.home .slider-button:hover {
+    background: #00000070;
+}
+
+.home .slider-button.left {
+    left: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.home .slider-button.right {
+    right: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.home .slide {
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none;
+}
+
+.home .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.home .slide img {
+    width: 100%;
+}
+
+.home .slider-balls {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .balls-wrap {
+    position: relative;
+}
+
+.home .ball-input {
+    margin: 0 4px;
+    transform: scale(.9);
+    opacity: .4;
+    cursor: pointer;
+}
+
+.home .ball-label {
+    background: #ee4d2d;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    z-index: 20;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ball-input:checked + .ball-label {
+    opacity: 1;
+}

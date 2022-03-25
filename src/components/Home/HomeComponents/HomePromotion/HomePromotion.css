@@ -1,0 +1,15 @@
+
+.home-promotion {
+    width: 400px;
+    height: 115px;
+    margin: 5px;
+}
+
+.home-promotion:first-child {
+    margin-top: 0;
+}
+
+.home-promotion img {
+    width: 100%;
+    height: 100%;
+}
