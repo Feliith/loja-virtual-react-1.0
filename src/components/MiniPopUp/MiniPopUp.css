@@ -1,0 +1,7 @@
+
+.mini-pop-up {
+    position: fixed;
+    right: 42px;
+    bottom: 80px;
+    z-index: 45;
+}

@@ -4,6 +4,8 @@
     width: 100vw;
     height: 120px;
     z-index: 30;
+    position: fixed;
+    top: 0;
 }
 
 .navbar-menu {

@@ -5,7 +5,8 @@
     justify-content: center;
     flex-direction: column;
     padding-top: 30px;
-    box-shadow: 0 1px 1px 0 #0000000d;
+    box-shadow: 0 1px 1px 0 #00000023;
+    margin-top: 120px;
 }
 
 .home-banner {

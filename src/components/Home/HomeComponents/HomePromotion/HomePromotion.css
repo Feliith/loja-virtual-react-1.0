@@ -3,6 +3,7 @@
     width: 400px;
     height: 115px;
     margin: 5px;
+    cursor: pointer;
 }
 
 .home-promotion:first-child {
