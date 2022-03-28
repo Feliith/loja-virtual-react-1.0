@@ -1,0 +1,114 @@
+
+.shopping-offer {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    width: 100%;
+    height: 320px;
+    position: relative;
+}
+
+.shopping-offer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.shopping-offer-img {
+    max-height: 20px;
+}
+
+.shopping-offer-head a {
+    color: #EE4D2D;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.shopping-offer-products {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 280px;
+}
+
+.shopping-offer-product {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+
+.shopping-offer-product-img {
+    max-width: 173px;
+    max-height: 173px;
+}
+
+.shopping-offer-product .shopee-mark {
+    max-width: 173px;
+    max-height: 173px;
+}
+
+.shopping-offer-product-offer {
+    background: #ffd424e6;
+    width: 50px;
+    height: 44px;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.shopping-offer-product-offer span {
+    color: #EE4D2D;
+}
+
+.shopping-offer-product-offer span:last-child {
+    color: #fff;
+}
+
+.shopping-offer-product-price {
+    color: #EE4D2D;
+    font-size: 24px;
+}
+
+.shopping-offer-product-price span {
+    font-size: 14px;
+}
+
+.shopping-offer-product-sold {
+    background: #ff6e2a69;
+    color: #fff;
+    width: 100%;
+    font-size: 13px;
+    border-radius: 12px;
+}
+
+.shopping-offer-slider-btn {
+    background: #fff;
+    color: #0000008a;
+    box-shadow: 0 1px 12px 0 rgb(0 0 0 / 12%);
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: -13px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+
+.shopping-offer:hover .shopping-offer-slider-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+}
