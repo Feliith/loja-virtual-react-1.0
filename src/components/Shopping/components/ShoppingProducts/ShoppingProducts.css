@@ -1,0 +1,121 @@
+.shopping-products {
+    padding: 40px 80px;
+    width: 100vw;
+}
+
+.shopping-products-theme {
+    background: #fff;
+    width: 100%;
+    height: 61px;
+}
+
+.shopping-products-theme li {
+    background: #fff;
+    width: 271px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid #000;
+    cursor: pointer;
+}
+
+.shopping-products-wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 2px;
+    flex-wrap: wrap;
+}
+
+.product-wrap {
+    background: #fff;
+    width: 190px;
+    height: 287px;
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid #fff;
+    transition: .3s;
+    text-decoration: none;
+    margin: 4px;
+}
+
+.product-wrap img {
+    width: 188px;
+    height: 188px;
+}
+
+.product-wrap > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 188px;
+    height: 97px;
+}
+
+.product-wrap > div > h2 {
+    font-size: 12px;
+    font-weight: 400;
+    align-self: flex-start;
+    padding: 0 10px;
+    color: #000;
+    margin-top: -4px;
+}
+
+.product-wrap > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:  0 10px;
+    margin-bottom: -4px;
+}
+
+.product-wrap > div > div > h3:nth-child(1) {
+    color: #EE4D2D;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.product-wrap > div > div > h3:nth-child(1) span {
+    font-size: 13px;
+}
+
+.product-wrap > div > div > h3:nth-child(2) {
+    color: #7e7e7e;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.product-wrap > span {
+    background: #EE4D2D;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: inherit;
+    height: 32px;
+    bottom: -32px;
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s;
+}
+
+.product-wrap:hover {
+    border: 1px solid #EE4D2D;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.product-wrap:hover > span {
+    opacity: 1;
+    pointer-events: auto;
+}
