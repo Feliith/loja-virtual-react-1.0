@@ -16,7 +16,7 @@ const ShoppingOfferProducts = [
         src: require('../../../../images/OfferProducts/offer-product-03.jpg'),
         price: '20,00',
         offer: '20%',
-        sold: 1
+        sold: 23
     },
     {
         src: require('../../../../images/OfferProducts/offer-product-04.jpg'),

@@ -20,8 +20,13 @@
     padding-right: 30px;
 }
 
+.shopping-offer-head > div {
+    display: flex;
+}
+
 .shopping-offer-img {
     max-height: 20px;
+    margin-right: 18px;
 }
 
 .shopping-offer-head a {
@@ -90,6 +95,17 @@
     width: 100%;
     font-size: 13px;
     border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+.shopping-offer-product-sold > span {
+    background: #EE4D2D;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .shopping-offer-slider-btn {
@@ -105,10 +121,53 @@
     top: 50%;
     transform: translateY(-50%);
     transition: .3s;
+    cursor: pointer;
 }
 
 .shopping-offer:hover .shopping-offer-slider-btn {
     width: 50px;
     height: 50px;
     font-size: 22px;
+}
+
+.shopping-offer-timer {
+    display: flex;
+}
+
+.shopping-offer-timer > div {  
+    background: #000;
+    color: #fff;
+    font-size: 15px;
+    margin: 0 2px;
+    width: 24px;
+    height: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.shopping-offer-timer > div > div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    transition: .3s;
+}
+
+.shopping-offer-timer > div > div:first-child {
+    left: 3px;
+}
+
+.shopping-offer-timer > div > div:last-child {
+    right: 3px;
+}
+
+.shopping-offer-timer span {
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

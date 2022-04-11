@@ -26,7 +26,9 @@ const ShoppingOffer = () => {
                             <span>OFF</span>
                         </div>
                         <p className='shopping-offer-product-price'><span>R$ </span>{item.price}</p>
-                        <p className='shopping-offer-product-sold'>{item.sold} VENDIDOS</p>
+                        <p className='shopping-offer-product-sold'>
+                            <span style={{right: `${100 - item.sold}%`}}></span>
+                        {item.sold} VENDIDOS</p>
                     </a>
                 )
             })}
