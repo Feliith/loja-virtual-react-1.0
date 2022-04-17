@@ -8,13 +8,13 @@ import Shopping from '../components/Shopping/Shopping'
 
 const Shop = () => {
   return (
-    <>
+    <div className='Shop'>
         <PopUp />
         <MiniPopUp />
         <Navbar />
         <Home />
         <Shopping />
-    </>
+    </div>
   )
 }
 

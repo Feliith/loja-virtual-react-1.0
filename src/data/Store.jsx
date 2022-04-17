@@ -1,20 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const initialStore = {
-    products: [],
-    cart: [],
-}
 
-const StoreContext = React.createContext(initialStore)
 
-const Store = (props) => {
-
-    const [cart, SetCart] = useState(initialStore)
-
+const Store = () => {
     return (
-        <StoreContext.Provider>
-            {props.children}
-        </StoreContext.Provider>
+        <Store>
+            
+        </Store>
     )
 }
 
