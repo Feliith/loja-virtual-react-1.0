@@ -1,0 +1,21 @@
+
+.Cart {
+    background: #F5F5F5;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.Cart .search-bar {
+    width: 517px;
+    position: relative;
+    box-shadow: none;
+    border: 2px solid #ee4d2d;
+    overflow: unset;
+    margin-right: 80px;
+}
+
+.Cart .search-button {
+    width: 80px;
+    height: 40px;
+    right: -80px;
+}

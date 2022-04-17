@@ -1,0 +1,27 @@
+.orange-checkbox {
+    margin-right: 20px;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    opacity: .4;
+}
+
+.orange-label {
+    width: 18px;
+    height: 18px;
+    background: #ee4d2d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 2px;
+}
+
+.orange-checkbox:checked + .orange-label {
+    opacity: 1;
+}

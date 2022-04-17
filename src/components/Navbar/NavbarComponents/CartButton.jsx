@@ -1,6 +1,9 @@
 import React, { Component } from "react"
+import { Link } from 'react-router-dom'
 
-class Cart extends Component {
+import CartButtonImg from '../../../images/cart-button.svg'
+
+class CartButton extends Component {
 
     state = {hover: false}
 
@@ -12,19 +15,19 @@ class Cart extends Component {
 
     render() {
         return (
-            <div className="navbar-cart"
+            <Link to="cart" className="navbar-cart"
             onMouseEnter={this.setHover}
             onMouseLeave={this.setHover}>
                 <a href="" className="cart-link">
-                    <i className="fa-solid fa-cart-shopping"></i>
+                    <img src={CartButtonImg} />
                 </a>
                 <div className={this.state.hover ? "cart-conteiner on" : "cart-conteiner"}>
                     <img src={require('../../../images/shop.png')} alt="Sacolas de Compras" />
                     <p>Não Há Produtos Ainda</p>
                 </div>
-            </div>
+            </Link>
         )
     }
 }
 
-export default Cart
+export default CartButton

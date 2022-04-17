@@ -1,0 +1,38 @@
+
+.empty-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.empty-cart img {
+    max-height: 100px;
+    margin-bottom: 18px;
+}
+
+.empty-cart p {
+    color: rgba(0,0,0,.4);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.empty-cart a {
+    background: #ee4d2d;
+    color: #fff;
+    width: 220px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 9%);
+}
+
+.empty-cart a:hover {
+    opacity: .9;
+}

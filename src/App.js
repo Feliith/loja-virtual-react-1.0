@@ -1,22 +1,20 @@
 import React from 'react'
 
 import Store from './data/Store'
-
-import Home from './components/Home/Home'
-import MiniPopUp from './components/MiniPopUp/MiniPopUp'
-import Navbar from './components/Navbar/Navbar'
-import PopUp from './components/PopUp/PopUp'
-import Shopping from './components/Shopping/Shopping'
+import Shop from './data/Shop'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Cart from './data/Cart'
 
 const App = () => {
     return (
         <div className='App'>
             <Store>
-                <PopUp />
-                <MiniPopUp />
-                <Navbar />
-                <Home />
-                <Shopping />
+                <Router>
+                    <Routes>
+                        <Route exact path="/" element={<Shop />} />
+                        <Route path="/cart" element={<Cart />} />
+                    </Routes>
+                </Router>
             </Store>
         </div>
     )
