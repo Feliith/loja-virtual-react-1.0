@@ -1,6 +1,8 @@
 import React from 'react'
 import './ShoppingProducts.css'
 
+import { Link } from 'react-router-dom'
+
 import ShopeeMark from '../../../ShopeeMark/ShopeeMark'
 import Products from '../../../../data/Products'
 
@@ -15,7 +17,7 @@ const ShoppingProducts = () => {
             <div className="shopping-products-wrap">
                 {Products.map((item, index) => {
                     return (
-                        <a href="" className='product-wrap'>
+                        <Link to={'/' + item.url} className='product-wrap'>
                             <img src={item.banner} />
                             <ShopeeMark />
                             <div>
@@ -28,7 +30,7 @@ const ShoppingProducts = () => {
                                 </div>
                             </div>
                             <span>Encontrar itens similares</span>
-                        </a>
+                        </Link>
                     )
                 })}
             </div>

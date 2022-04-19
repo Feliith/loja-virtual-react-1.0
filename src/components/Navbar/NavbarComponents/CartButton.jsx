@@ -15,17 +15,17 @@ class CartButton extends Component {
 
     render() {
         return (
-            <Link to="cart" className="navbar-cart"
+            <div className="navbar-cart"
             onMouseEnter={this.setHover}
             onMouseLeave={this.setHover}>
-                <a href="" className="cart-link">
+                <Link to="cart" className="cart-link">
                     <img src={CartButtonImg} />
-                </a>
+                </Link>
                 <div className={this.state.hover ? "cart-conteiner on" : "cart-conteiner"}>
                     <img src={require('../../../images/shop.png')} alt="Sacolas de Compras" />
                     <p>Não Há Produtos Ainda</p>
                 </div>
-            </Link>
+            </div>
         )
     }
 }
