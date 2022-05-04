@@ -1,10 +1,12 @@
 import './ProductPageInfo.css'
-import React from 'react'
+import React, {useState} from 'react'
 
 import Stars from '../../../components/Stars/Stars'
 import ProductPagePrice from './ProductPagePrice/ProductPagePrice'
 import ProductPagePriceOffer from './ProductPagePrice/ProductPagePriceOffer'
 import Counter from '../../../components/Counter/Counter'
+import AddCartButton from './AddCartButton/AddCartButton'
+import BuyButton from './BuyButton/BuyButton'
 
 const ProductPageInfo = (props) => {
 
@@ -22,6 +24,12 @@ const ProductPageInfo = (props) => {
 
     function handleHover(src) {
         props.colorImage(src)
+    }
+
+    const [colorError, setColorError] = useState(false)
+
+    function colorErrorFunc(props) {
+        setColorError(props)
     }
 
     return (
@@ -55,24 +63,32 @@ const ProductPageInfo = (props) => {
                 <p><img src={require('../../../images/coin.png')} />Compre e ganhe <span>{parseInt(props.priceOffer)}</span> moedas Shopee</p>
             </div>
 
-            {props.color ? <div className="product-page-info-color">
-                <p className='product-page-info-p'>Cor</p>
-                {props.color.map((item, index) => {
-                    return (
-                        <button key={index} className='product-page-info-color-button'
-                            onClick={e => handleClick(e.target)}
-                            onMouseEnter={e => handleHover(item.colorSrc)}
-                        >
-                            {item.colorName}
-                            <i className="fa-solid fa-check"></i>
-                        </button>
-                    )
-                })}
+            {props.color ? <div className={colorError ? "product-page-info-color error" : "product-page-info-color"}>
+                <div>
+                    <p className='product-page-info-p'>Cor</p>
+                    {props.color.map((item, index) => {
+                        return (
+                            <button key={index} className='product-page-info-color-button'
+                                onClick={e => handleClick(e.target)}
+                                onMouseEnter={e => handleHover(item.colorSrc)}
+                            >
+                                {item.colorName}
+                                <i className="fa-solid fa-check"></i>
+                            </button>
+                        )
+                    })}
+                </div>
+                <p>Selecione a variação do produto primeiro</p>
             </div> : ''}
 
             <div className='product-page-info-quant'>
                 <p className='product-page-info-p'>Quantidade</p>
                 <Counter quant={props.quant}/>
+            </div>
+
+            <div className='purchase'>
+                <AddCartButton whenClick={colorErrorFunc} noVariable={props.color} />
+                <BuyButton />
             </div>
         </div>
     )

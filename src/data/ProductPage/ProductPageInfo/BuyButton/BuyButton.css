@@ -1,0 +1,15 @@
+
+.buy-btn {
+    background: #ee4d2d;
+    color: #fff;
+    font-size: 16px;
+    width: 148px;
+    height: 48px;
+    border: none;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 9%);
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background: #f55e40;
+}
