@@ -1,9 +1,21 @@
+.orange-checkbox-div {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin: 0 20px;
+}
+
 .orange-checkbox {
-    margin-right: 20px;
     width: 18px;
     height: 18px;
     border-radius: 2px;
     opacity: .4;
+    position: absolute;
+    left: 0;
+}
+
+.orange-checkbox-div:hover {
+    background: #ececec;
 }
 
 .orange-label {
@@ -14,12 +26,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 0;
     opacity: 0;
     pointer-events: none;
     border-radius: 2px;
+    position: absolute;
 }
 
 .orange-checkbox:checked + .orange-label {

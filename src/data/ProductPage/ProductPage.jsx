@@ -48,7 +48,8 @@ const ProductPage = (props) => {
                         <ProductPageLike />
                     </div>
                 </div>
-                <ProductPageInfo 
+                <ProductPageInfo
+                    id={props.id} 
                     title={props.title}
                     stars={props.stars}
                     evaluation={props.evaluation}

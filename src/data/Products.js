@@ -1,5 +1,6 @@
 const Products = [
     {
+        id: 0,
         banner: require('../../src/images/Products/smartwatch/smartwatch-pink.jpg'),
         title: 'Smartwatch Y68/D20',
         url: 'smartwatch',
@@ -10,6 +11,7 @@ const Products = [
         star: '4.7',
         evaluation: '49,1mil',
         sold: '12mil',
+        colorId: 0,
         color: [
             {
                 colorName: 'Rosa',
@@ -36,6 +38,7 @@ const Products = [
         ]
     },
     {
+        id: 1,
         banner: require('../../src/images/Products/relogio-pulso/relogio-pulso.jpg'),
         title: 'Relógio De Pulso, Gato Luminoso',
         url: 'relogio-pulso',
@@ -46,6 +49,7 @@ const Products = [
         star: '4.8',
         evaluation: '565',
         sold: '1,1mil',
+        colorId: 0,
         color: [
             {
                 colorName: 'Completo',
@@ -62,6 +66,7 @@ const Products = [
         ]
     },
     {
+        id: 2,
         banner: require('../../src/images/Products/camiseta-time/camiseta-time-pink.jpg'),
         title: 'Camisetas Femininas De Time, Sao Paulo',
         url: 'camiseta-time',
@@ -72,6 +77,7 @@ const Products = [
         star: '3.7',
         evaluation: '40',
         sold: '74',
+        colorId: 0,
         color: [
             {
                 colorName: 'Rosa',
@@ -88,6 +94,7 @@ const Products = [
         ]
     },
     {
+        id: 3,
         banner: require('../../src/images/Products/maquina-cabelo/maquina-cabelo.jpg'),
         title: 'Máquina De Cortar Cabelo Profissional',
         url: 'maquina-cabelo',
@@ -106,6 +113,7 @@ const Products = [
         ]
     },
     {
+        id: 4,
         banner: require('../../src/images/Products/fone-pastel/fone-pastel.jpg'),
         title: 'I12 Fone De Ouvido Sem Fio Cor Pastel',
         url: 'fone-pastel',
@@ -116,6 +124,7 @@ const Products = [
         star: '4.7',
         evaluation: '23,7mil',
         sold: '80,2mil',
+        colorId: 0,
         color: [
             {
                 colorName: 'Azul',
@@ -139,6 +148,7 @@ const Products = [
         ]
     },
     {
+        id: 5,
         banner: require('../../src/images/Products/adesivo-cartao/adesivo-cartao.jpg'),
         title: 'Adesivo Para Cartão de Crédito',
         url: 'adesivo-cartao',
@@ -155,6 +165,7 @@ const Products = [
         ]
     },
     {
+        id: 6,
         banner: require('../../src/images/Products/corrente-lacoste/corrente-lacoste.jpg'),
         title: 'Corrente Cartier Dourado',
         url: 'corrente-lacoste',
@@ -171,6 +182,7 @@ const Products = [
         ]
     },
     {
+        id: 7,
         banner: require('../../src/images/Products/perfume-scandal/perfume-scandal.jpg'),
         title: 'Perfume Scandal By Night',
         url: 'perfume-scandal',
@@ -186,6 +198,7 @@ const Products = [
         ]
     },
     {
+        id: 8,
         banner: require('../../src/images/Products/oculos-gradiente/oculos-gradiente.jpg'),
         title: 'Óculos de Sol Gradiente',
         url: 'oculos-gradiente',
@@ -196,6 +209,7 @@ const Products = [
         star: '4.8',
         evaluation: '8,3mil',
         sold: '24,2mil',
+        colorId: 0,
         color: [
             {
                 colorName: 'Cinza e Rosa',
@@ -218,6 +232,7 @@ const Products = [
         ]
     },
     {
+        id: 9,
         banner: require('../../src/images/Products/fone-intra/fone-intra-black.jpg'),
         title: 'Fone de Ouvido Intra-auricular/Sem Fio',
         url: 'fone-intra',
@@ -228,6 +243,7 @@ const Products = [
         star: '4.4',
         evaluation: '7,8mil',
         sold: '20,5mil',
+        colorId: 0,
         color: [
             {
                 colorName: 'Preto',
@@ -245,6 +261,7 @@ const Products = [
         ]
     },
     {
+        id: 10,
         banner: require('../../src/images/Products/conjunto-nike/conjunto-nike-black.jpg'),
         title: 'Conjunto Nike',
         url: 'conjunto-nike',
@@ -253,6 +270,7 @@ const Products = [
         star: '4.9',
         evaluation: '302',
         sold: '700',
+        colorId: 0,
         color: [
             {
                 colorName: 'Preto',
@@ -274,6 +292,7 @@ const Products = [
         ]
     },
     {
+        id: 11,
         banner: require('../../src/images/Products/tenis-nike/tenis-nike.jpg'),
         title: 'Tênis Nike',
         url: 'tenis-nike',
@@ -284,6 +303,7 @@ const Products = [
         star: '4.8',
         evaluation: '8,1mil',
         sold: '16mil',
+        colorId: 0,
         color: [
             {
                 colorName: 'Padrão',

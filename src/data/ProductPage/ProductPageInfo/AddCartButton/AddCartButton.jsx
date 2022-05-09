@@ -1,17 +1,28 @@
 import './AddCartButton.css'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+
+import Products from '../../../Products'
+import { CartProducts } from '../../../CartProducts'
 
 import AddCartButtonImage from '../../../../images/add-cart-btn.svg'
 
 const AddCartButton = (props) => {
 
+    const cartContext = useContext(CartProducts)
+
     const [popUp, setPopUp] = useState(false)
+
+    const ProductList = Products[props.id]
+    const actualProduct = {...ProductList}
+    actualProduct.id = cartContext.length
+    actualProduct.colorId = props.colorSelected
 
     function handleClick() {
         const hasColor = document.querySelector('.product-page-info-color-button.active')
         if (hasColor || props.noVariable == false) {
             props.whenClick(false)
             popUpFunc()
+            cartContext.push(actualProduct)
         } else {
             props.whenClick(true)
         }

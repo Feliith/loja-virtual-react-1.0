@@ -17,7 +17,7 @@ const ShoppingProducts = () => {
             <div className="shopping-products-wrap">
                 {Products.map((item, index) => {
                     return (
-                        <Link to={'/' + item.url} className='product-wrap'>
+                        <Link key={index} to={'/' + item.url} className='product-wrap'>
                             <img src={item.banner} />
                             <ShopeeMark />
                             <div>

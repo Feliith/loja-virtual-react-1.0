@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import SearchBar from './NavbarComponents/SearchBar'
 import SearchMenu from './NavbarComponents/SearchMenu'
 import CartButton from './NavbarComponents/CartButton'
@@ -10,9 +12,9 @@ const Search = () => {
     return (
         <div className="navbar-search-menu">
             <div className='navbar-logo-wrap'>
-                <a href="/" className='navbar-logo'>
+                <Link to="/" className='navbar-logo'>
                     <img src={ShopeeLogo} alt="Shopee Logo" />
-                </a>
+                </Link>
             </div>
             <div className="search-wrap">
                 <SearchBar />

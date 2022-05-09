@@ -18,7 +18,7 @@ class CartButton extends Component {
             <div className="navbar-cart"
             onMouseEnter={this.setHover}
             onMouseLeave={this.setHover}>
-                <Link to="cart" className="cart-link">
+                <Link to="/cart" className="cart-link">
                     <img src={CartButtonImg} />
                 </Link>
                 <div className={this.state.hover ? "cart-conteiner on" : "cart-conteiner"}>

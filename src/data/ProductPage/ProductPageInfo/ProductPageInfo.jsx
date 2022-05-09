@@ -10,6 +10,8 @@ import BuyButton from './BuyButton/BuyButton'
 
 const ProductPageInfo = (props) => {
 
+    const [colorSelected, setColorSelected] = useState()
+
     function handleClick(obj) {
         const colorOn = document.querySelector('.product-page-info-color-button.active')
         if (colorOn) {
@@ -20,6 +22,7 @@ const ProductPageInfo = (props) => {
         } else {
             obj.classList.add('active')
         }
+        setColorSelected(obj.id)
     }
 
     function handleHover(src) {
@@ -69,6 +72,7 @@ const ProductPageInfo = (props) => {
                     {props.color.map((item, index) => {
                         return (
                             <button key={index} className='product-page-info-color-button'
+                            id={index}
                                 onClick={e => handleClick(e.target)}
                                 onMouseEnter={e => handleHover(item.colorSrc)}
                             >
@@ -87,7 +91,11 @@ const ProductPageInfo = (props) => {
             </div>
 
             <div className='purchase'>
-                <AddCartButton whenClick={colorErrorFunc} noVariable={props.color} />
+                <AddCartButton 
+                whenClick={colorErrorFunc} 
+                noVariable={props.color} 
+                colorSelected={colorSelected}
+                id={props.id} />
                 <BuyButton />
             </div>
         </div>

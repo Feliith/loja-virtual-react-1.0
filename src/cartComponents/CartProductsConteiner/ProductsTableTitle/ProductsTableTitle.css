@@ -12,23 +12,32 @@
     font-size: 14px;
 }
 
-.products-table-title table {
+.products-table-title > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-.products-table-title table th {
+.products-table-title div > div {
     font-weight: 400;
     text-align: start;
     display: flex;
     align-items: center;
 }
 
-.products-table-title table th:first-child {
+.products-table-title div > div:first-child {
     color: rgba(0,0,0,.8);
     width: 500px;
     position: relative;
 }
 
+.products-table-title .orange-checkbox-div {
+    margin-left: 0;
+}
+
+.products-table-title span {
+    width: 18px;
+    height: 18px;
+    margin-right: 20px;
+}

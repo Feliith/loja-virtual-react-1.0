@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+import { CartProducts, products } from './data/CartProducts'
+
 ReactDOM.render(
-    <App />,
+    <CartProducts.Provider value={products}>
+      <App />
+    </CartProducts.Provider>,
   document.getElementById('root')
 );
 

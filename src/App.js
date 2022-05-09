@@ -18,6 +18,7 @@ const App = () => {
                         return (
                             <Route key={index} path={'/' + item.url} 
                             element={<ProductPage 
+                                id={item.id}
                                 title={item.title}
                                 url={item.url}
                                 banner={item.banner}
