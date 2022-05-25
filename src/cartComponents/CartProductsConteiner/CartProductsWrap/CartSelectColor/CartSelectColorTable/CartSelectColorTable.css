@@ -1,0 +1,126 @@
+
+.cart-select-color-table {
+    position: absolute;
+    top: 46px;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.cart-select-color-table.on {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.cart-select-color-table .table-arrow {
+    background: #fff;
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: rgb(0 0 0 / 8%) 0px -2px -2px 0px;
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 55;
+}
+
+.cart-select-color-table .select-color-wrap {
+    background: #fff;
+    width: 366px;
+    padding: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 10px;
+    position: absolute;
+    top: 7px;
+    left: -176px;
+    z-index: 50;
+}
+
+
+.select-color-btns p {
+    color: rgba(0,0,0,.54);
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.select-color-btns button {
+    background: #fff;
+    color: rgba(0,0,0,.8);
+    border: 1px solid rgba(0,0,0,.09);
+    width: 80px;
+    height: 34px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.select-color-btns button:hover {
+    color: #ee4d2d;
+    border: 1px solid #ee4d2d;
+}
+
+.select-color-btns button.active {
+    color: #ee4d2d;
+    border: 1px solid #ee4d2d;
+}
+
+.select-color-btns button span {
+    display: none;
+}
+
+.select-color-btns button.active span {
+    background: #ee4d2d;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    transform: rotate(45deg);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.select-color-btns button span i {
+    margin: 0;
+    transform: rotate(-45deg);
+    font-size: 10px;
+}
+
+
+
+.select-color-confirm {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.select-color-confirm button {
+    width: 140px;
+    height: 38px;
+    font-size: .875rem;
+}
+
+.select-color-confirm button:first-child {
+    color: #555;
+    margin-right: 6px;
+}
+
+.select-color-confirm button:first-child:hover {
+    background: rgba(0, 0, 0, 0.021);
+}
+
+.select-color-confirm button:last-child {
+    background: #ee4d2d;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+.select-color-confirm button:last-child:hover {
+    background: #ee4d2de0;
+}

@@ -1,0 +1,33 @@
+
+.cart-select-color {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+
+.cart-select-color button {
+    background: none;
+    color: rgba(0,0,0,.54);
+    border: none;
+    cursor: pointer;
+    font-size: .875rem;
+}
+
+.cart-select-color button i {
+    margin-left: 8px;
+    font-size: 14px;
+    margin-bottom: 6px;
+    transition: .3s;
+}
+
+.cart-select-color button span.on i{
+    transform: rotate(-180deg);
+}
+
+.cart-select-color p {
+    color: rgba(0, 0, 0, 0.603);
+    font-size: .85rem;
+    padding: 0;
+}

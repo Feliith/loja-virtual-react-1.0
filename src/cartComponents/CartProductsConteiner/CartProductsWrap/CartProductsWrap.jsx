@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { CartProducts } from '../../../data/CartProducts'
 import OrangeCheckbox from '../../../components/OrangeCheckbox/OrangeCheckbox'
-import CartSelectColor from './components/CartSelectColor/CartSelectColor'
+import CartSelectColor from './CartSelectColor/CartSelectColor'
 
 const CartProductsWrap = () => {
 
@@ -22,8 +22,12 @@ const CartProductsWrap = () => {
                         </Link>
                         {item.color ? 
                         <CartSelectColor 
-                        color={item.color[item.colorId].colorName} /> :
-                         ''}
+                        id={item.id}
+                        color={item.color[item.colorId].colorName}
+                        colors={item.color}
+                        colorId={item.colorId} /> :
+                         ''
+                        }
                     </div>
                 )
             })}
