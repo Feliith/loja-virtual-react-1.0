@@ -1,0 +1,36 @@
+
+.cart-quant-counter {
+    display: flex;
+    margin-left: 64px;
+}
+
+.cart-quant-counter button {
+    background: none;
+    color: rgba(0, 0, 0, 0.61);
+    font-size: 22px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(0,0,0,.09);
+    cursor: pointer;
+}
+
+.cart-quant-counter input {
+    width: 50px;
+    height: 32px;
+    outline: none;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,.09);
+    border-bottom: 1px solid rgba(0,0,0,.09);
+    text-align: center;
+    font-size: 16px;
+}
+
+.cart-quant-counter input::-webkit-outer-spin-button,
+.cart-quant-counter input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cart-quant-counter input[type=number]{
+    -moz-appearance: textfield;
+}

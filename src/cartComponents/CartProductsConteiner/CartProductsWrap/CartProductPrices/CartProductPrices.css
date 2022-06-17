@@ -1,0 +1,17 @@
+
+.cart-product-prices.offer-on {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.cart-product-prices.offer-on p {
+    width: unset;
+    padding: 0;
+}
+
+.cart-product-prices.offer-on p:first-child {
+    color: rgba(0,0,0,.54);
+    text-decoration: line-through;
+    margin-right: 10px;
+}

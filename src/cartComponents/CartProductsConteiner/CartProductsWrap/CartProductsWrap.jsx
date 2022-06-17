@@ -5,10 +5,16 @@ import { Link } from 'react-router-dom'
 import { CartProducts } from '../../../data/CartProducts'
 import OrangeCheckbox from '../../../components/OrangeCheckbox/OrangeCheckbox'
 import CartSelectColor from './CartSelectColor/CartSelectColor'
+import CartProductPrices from './CartProductPrices/CartProductPrices'
+import CartQuantCounter from './CartQuantCounter/CartQuantCounter'
 
 const CartProductsWrap = () => {
 
     const cartContext = useContext(CartProducts)
+
+    function setQuant(props) {
+        cartContext[props[1]].quant = props[0]
+    }
 
     return (
         <div className='cart-products-wrap'>
@@ -28,6 +34,8 @@ const CartProductsWrap = () => {
                         colorId={item.colorId} /> :
                          ''
                         }
+                        <CartProductPrices price={item.price} priceOffer={item.priceOffer} />
+                        <CartQuantCounter setQuant={setQuant} id={index} />
                     </div>
                 )
             })}
