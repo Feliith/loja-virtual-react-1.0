@@ -4,6 +4,7 @@
     margin-top: 12px;
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
     border-radius: .125rem;
+    position: relative;
 }
 
 .cart-product {
@@ -32,4 +33,17 @@
     width: 226px;
     padding: 10px 20px;
     align-items: flex-start;
+}
+
+.cart-product-item-remove {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 50px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.cart-product-item-remove:hover {
+    color: #ee4d2d;
 }

@@ -1,5 +1,5 @@
 import './CartProductsWrap.css'
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { CartProducts } from '../../../data/CartProducts'
@@ -7,13 +7,21 @@ import OrangeCheckbox from '../../../components/OrangeCheckbox/OrangeCheckbox'
 import CartSelectColor from './CartSelectColor/CartSelectColor'
 import CartProductPrices from './CartProductPrices/CartProductPrices'
 import CartQuantCounter from './CartQuantCounter/CartQuantCounter'
+import CartProductTotalPrice from './CartProductTotalPrice/CartProductTotalPrice'
 
 const CartProductsWrap = () => {
 
     const cartContext = useContext(CartProducts)
 
+    const [quant, setQuantUp] = useState()
+
     function setQuant(props) {
         cartContext[props[1]].quant = props[0]
+        setQuantUp(props[0])
+    }
+
+    function deleteItem(id) {
+        cartContext.splice(cartContext[id])
     }
 
     return (
@@ -36,6 +44,13 @@ const CartProductsWrap = () => {
                         }
                         <CartProductPrices price={item.price} priceOffer={item.priceOffer} />
                         <CartQuantCounter setQuant={setQuant} id={index} />
+                        <CartProductTotalPrice 
+                            price={item.priceOffer ? 
+                                parseFloat(item.priceOffer.replace(',', '.') * quant).toFixed(2) : 
+                                parseFloat(item.price.replace(',', '.') * quant).toFixed(2)} />
+                        <button className='cart-product-item-remove' onClick={e => deleteItem(index)}>
+                            Apagar
+                        </button>
                     </div>
                 )
             })}

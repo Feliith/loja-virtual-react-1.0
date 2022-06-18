@@ -20,7 +20,7 @@ const CartProductsConteiner = () => {
             }
         }
     }
-
+    
     return (
         <div className='cart-products-conteiner'>
             <ProductsTableTitle setCheck={setCheck} setChecked={setChecked} />
