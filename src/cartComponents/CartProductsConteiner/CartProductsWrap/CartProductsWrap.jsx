@@ -20,10 +20,6 @@ const CartProductsWrap = () => {
         setQuantUp(props[0])
     }
 
-    function deleteItem(id) {
-        cartContext.splice(cartContext[id])
-    }
-
     return (
         <div className='cart-products-wrap'>
             {cartContext.map((item, index) => {
@@ -48,9 +44,6 @@ const CartProductsWrap = () => {
                             price={item.priceOffer ? 
                                 parseFloat(item.priceOffer.replace(',', '.') * quant).toFixed(2) : 
                                 parseFloat(item.price.replace(',', '.') * quant).toFixed(2)} />
-                        <button className='cart-product-item-remove' onClick={e => deleteItem(index)}>
-                            Apagar
-                        </button>
                     </div>
                 )
             })}

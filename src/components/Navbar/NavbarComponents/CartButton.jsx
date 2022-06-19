@@ -1,7 +1,10 @@
 import React, { Component } from "react"
+import { useContext } from "react"
 import { Link } from 'react-router-dom'
+import { CartProducts } from "../../../data/CartProducts"
 
 import CartButtonImg from '../../../images/cart-button.svg'
+import CartButtonCard from "./CartButtonCard"
 
 class CartButton extends Component {
 
@@ -22,8 +25,7 @@ class CartButton extends Component {
                     <img src={CartButtonImg} />
                 </Link>
                 <div className={this.state.hover ? "cart-conteiner on" : "cart-conteiner"}>
-                    <img src={require('../../../images/shop.png')} alt="Sacolas de Compras" />
-                    <p>Não Há Produtos Ainda</p>
+                    <CartButtonCard />
                 </div>
             </div>
         )
